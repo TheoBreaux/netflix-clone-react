@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import MovieRow from "./MovieRow";
+import "./style.css";
 
 const App = () => {
     return (

@@ -12,7 +12,6 @@ const MovieRow = ({ rowText }) => {
                 <img src={moviePoster} />
                 <img src={moviePoster} />
                 <img src={moviePoster} />
-                <img src={moviePoster} />
             </div>
         </div >
     );
