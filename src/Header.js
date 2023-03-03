@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Header() {
+function Header(props) {
     return (
         <header>
             <div className="header__top-row">
@@ -30,7 +30,7 @@ function Header() {
                         distinctio, minus nulla quas temporibus et.
                     </p>
                     <button>Play</button>
-                    <button className="gray-button">More Info</button>
+                    <button onClick={() => props.setOpenModal(true)} className="gray-button">More Info</button>
                 </div>
             </div>
         </header>

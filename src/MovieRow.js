@@ -1,21 +1,24 @@
 import React from 'react';
-import moviePoster from '../public/megan.jpg';
 
-const MovieRow = ({ rowText }) => {
+const MovieRow = (props) => {
+
+    const imgURL = 'https://image.tmdb.org/t/p/w500';
+
     return (
-        <div className="movieRow">
-            <h4>{rowText}</h4>
+        <div className="row">
+            <h4>{props.data.name}</h4>
             <div className="images-container">
-                <img src={moviePoster} />
-                <img src={moviePoster} />
-                <img src={moviePoster} />
-                <img src={moviePoster} />
-                <img src={moviePoster} />
-                <img src={moviePoster} />
-                <img src={moviePoster} />
+                {props.data.items.map((movie) => (
+                    <img
+                        src={`${imgURL}${movie.poster_path}`}
+                        alt={`Movie poster of ${movie.title}`}
+                        key={`${Math.random()}-${movie.id}`} />
+                ))}
             </div>
-        </div >
+        </div>
+
     );
 };
+
 
 export default MovieRow;

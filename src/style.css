@@ -52,7 +52,7 @@ button {
 
 .gray-button {
     background-color: gray;
-    color: white;
+    /* color: white; */
 }
 
 .header-main__left-section {
@@ -72,4 +72,17 @@ button {
 img {
     height: 100%;
     margin: 5px;
+}
+
+
+.modal {
+    position: fixed;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    border-radius: 12px;
+    width: 90%;
+    height: 90%;
+    padding: 20px;
 }
